@@ -5,6 +5,7 @@ const express = require("express");
 const app = express(); // app is used commonly and easier for other people to understhand
 
 
+
 app.get("/", function(request, response){ // rep, res
 
   //console.log(request);
@@ -12,6 +13,11 @@ app.get("/", function(request, response){ // rep, res
   response.send("<h1>Hello World</h1>");
 
 
+
+});
+
+app.get("/contact", function(req, res){
+  res.send("You find the contact!");
 
 });
 
