@@ -36,10 +36,6 @@ app.post("/", function(req, res){
   }
 
 
-
-
-
-
   request(options, function(error, response, body){
     console.log(error);
     console.log("body: " + body);
