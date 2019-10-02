@@ -9,7 +9,7 @@ var path = require('path');
 
 app.use(bodyParser.urlencoded({extended:true}));
 //app.use(express.static(__dirname + "/public"));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 
 
@@ -20,6 +20,18 @@ app.get("/", function(req, res){
 
 app.get("/test.html", function(req, res){
   res.sendFile(__dirname + "/test.html");
+});
+
+
+app.post("/", function(req, res){
+  var fn = req.body.firstName;
+  var ln = req.body.lastName;
+  var email = req.body.email;
+
+  console.log(fn + " " + ln + " " + email );
+
+
+
 });
 
 
